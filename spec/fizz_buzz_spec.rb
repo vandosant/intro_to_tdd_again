@@ -1,10 +1,10 @@
 require 'fizz_buzz'
 
 describe "FizzBuzz" do
-  it "creates an array of numbers 1 to specified parameter" do
+  it "replaces multiples of 3 in array with 'Fizz'" do
     test_array = FizzBuzz.new(6)
 
-    expected = [1, 2, 3, 4, 5, 6]
+    expected = [1, 2, 'Fizz', 4, 5, 'Fizz']
 
     actual = test_array.arrayify
 

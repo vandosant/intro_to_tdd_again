@@ -1,8 +1,20 @@
 class FizzBuzz
   def initialize(max_range)
     @max_range = max_range
+    @array = Array.new
   end
   def arrayify
-    [1, 2, 3, 4, 5, 6]
+    @array = 1.upto(@max_range).to_a
+
+    count = 0
+
+    while count < @max_range
+        if @array[count] % 3 == 0
+          @array[count] = "Fizz"
+        end
+        count += 1
+    end
+    @array
+
   end
 end
