@@ -9,8 +9,10 @@ class FizzBuzz
     count = 0
 
     while count < @max_range
-        if @array[count] % 3 == 0
-          @array[count] = "Fizz"
+        if @array[count] % 3 == 0 && @array[count] % 5 == 0
+          @array[count] = "FizzBuzz"
+        elsif @array[count] % 3 == 0
+            @array[count] = "Fizz"
         elsif @array[count] % 5 == 0
           @array[count] = "Buzz"
         end
