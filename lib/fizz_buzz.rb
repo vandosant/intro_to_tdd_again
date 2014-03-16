@@ -11,6 +11,8 @@ class FizzBuzz
     while count < @max_range
         if @array[count] % 3 == 0
           @array[count] = "Fizz"
+        elsif @array[count] % 5 == 0
+          @array[count] = "Buzz"
         end
         count += 1
     end
