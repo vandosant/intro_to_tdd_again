@@ -22,4 +22,16 @@ describe KeyValueStore do
 
     expect(actual).to eq expected
   end
+
+  it "deletes a stored key" do
+    test_key = KeyValueStore.new
+
+    test_key.save("Cat", "Hat")
+
+    actual = test_key.delete("Cat")
+
+    expected = "Hat"
+
+    expect(actual).to eq expected
+  end
 end
