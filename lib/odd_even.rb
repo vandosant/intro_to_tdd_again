@@ -5,5 +5,16 @@ class OddEven
 
   def arrayify
     @array = 1.upto(@max_value).to_a
+
+    position = 0
+
+    while position < @array.length
+      if @array[position] % 2 == 0
+        @array[position] = 'Even'
+      end
+
+      position += 1
+    end
+    @array
   end
 end
