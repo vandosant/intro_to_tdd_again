@@ -11,6 +11,8 @@ class OddEven
     while position < @array.length
       if @array[position] % 2 == 0
         @array[position] = 'Even'
+      elsif @array[position] % 2 != 0
+        @array[position] = 'Odd'
       end
 
       position += 1

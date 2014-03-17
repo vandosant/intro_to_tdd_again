@@ -1,10 +1,10 @@
 require 'odd_even'
 
 describe OddEven do
-  it "generates an array 1 up to a passed integer, where even numbers are 'Even'." do
+  it "generates an array 1 up to a passed integer, where even numbers are 'Even'. odd are 'Odd'" do
     test_array = OddEven.new(8)
 
-    expected = [1, 'Even', 3, 'Even', 5, 'Even', 7, 'Even']
+    expected = ['Odd', 'Even', 'Odd', 'Even', 'Odd', 'Even', 'Odd', 'Even']
 
     actual = test_array.arrayify
 
