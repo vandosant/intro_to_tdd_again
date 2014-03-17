@@ -28,9 +28,11 @@ describe KeyValueStore do
 
     test_key.save("Cat", "Hat")
 
-    actual = test_key.delete("Cat")
+    test_key.delete("Cat")
 
-    expected = "Hat"
+    actual = test_key.get("Cat")
+
+    expected = nil
 
     expect(actual).to eq expected
   end
