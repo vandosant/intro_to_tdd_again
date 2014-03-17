@@ -4,7 +4,8 @@ class KeyValueStore
   end
 
   def save(key, value)
-    @store = {key => value}
+    @store[key] = value
+    return @store
   end
 
   def get(key)
@@ -13,5 +14,9 @@ class KeyValueStore
 
   def delete(key)
     @store.delete(key)
+  end
+
+  def get_keys
+    @store.keys
   end
 end

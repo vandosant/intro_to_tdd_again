@@ -36,4 +36,17 @@ describe KeyValueStore do
 
     expect(actual).to eq expected
   end
+
+  it "returns all stored keys" do
+    test_key = KeyValueStore.new
+
+    test_key.save("Cat", "Hat")
+    test_key.save("Sat", "Mat")
+    test_key.save("Ate", "Cake")
+
+    actual = test_key.get_keys
+    expected = ["Cat", "Sat", "Ate"]
+
+    expect(actual).to eq expected
+  end
 end
