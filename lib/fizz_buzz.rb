@@ -1,7 +1,6 @@
 class FizzBuzz
   def initialize(max_range)
     @max_range = max_range
-    @array = Array.new
   end
   def arrayify
     @array = 1.upto(@max_range).to_a
