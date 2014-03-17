@@ -49,4 +49,18 @@ describe KeyValueStore do
 
     expect(actual).to eq expected
   end
+
+  it "clears all stored keys and values" do
+    test_key = KeyValueStore.new
+
+    test_key.save("Cat", "Hat")
+    test_key.save("Sat", "Mat")
+    test_key.save("Ate", "Cake")
+
+    test_key.clear
+    actual = test_key.get_keys
+    expected = []
+
+    expect(actual).to eq expected
+  end
 end
