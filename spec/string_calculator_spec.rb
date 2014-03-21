@@ -30,4 +30,14 @@ describe StringCalculator do
 
     expect(actual).to eq expected
   end
+
+  it "ignores letters in the string" do
+    tester = StringCalculator.new
+
+    expected = 102
+
+    actual = tester.add("30, a, b, cee, 62, 10, what")
+
+    expect(actual).to eq expected
+  end
 end
