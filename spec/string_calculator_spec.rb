@@ -20,4 +20,14 @@ describe StringCalculator do
 
     expect(actual).to eq expected
   end
+
+  it "adds double-digit numbers in a string" do
+    tester = StringCalculator.new
+
+    expected = 102
+
+    actual = tester.add("30, 62, 10")
+
+    expect(actual).to eq expected
+  end
 end
