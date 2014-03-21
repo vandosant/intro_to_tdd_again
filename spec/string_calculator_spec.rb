@@ -10,4 +10,14 @@ describe StringCalculator do
 
     expect(actual).to eq expected
   end
+
+  it "counts single-digit numbers in a string" do
+    tester = StringCalculator.new
+
+    expected = 10
+
+    actual = tester.add("3, 6, 1")
+
+    expect(actual).to eq expected
+  end
 end
