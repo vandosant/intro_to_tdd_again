@@ -40,4 +40,16 @@ describe StringCalculator do
 
     expect(actual).to eq expected
   end
+
+  it "allows user to specify a delimeter" do
+    tester = StringCalculator.new
+
+    tester.delimeter("!")
+
+    expected = 10
+
+    actual = tester.add("3! 6! 1!")
+
+    expect(actual).to eq expected
+  end
 end

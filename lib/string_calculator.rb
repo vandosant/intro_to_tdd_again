@@ -1,6 +1,10 @@
 class StringCalculator
+  def initialize
+    @delimiter = ","
+  end
+
   def add(string)
-    numbers = string.split(",")
+    numbers = string.split("#{@delimiter}")
     number_count = 0
 
     i = 0
@@ -10,5 +14,9 @@ class StringCalculator
     end
     number_count
 
+  end
+
+  def delimeter(new_delimiter)
+    @delimiter = new_delimiter
   end
 end
