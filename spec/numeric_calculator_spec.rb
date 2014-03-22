@@ -20,4 +20,16 @@ describe NumericCalculator do
 
     expect(actual).to eq expected
   end
+
+  it "saves a number and returns it when asked" do
+    tester = NumericCalculator.new
+
+    expected = 45
+
+    tester.save(45)
+
+    actual = tester.get
+
+    expect(actual).to eq expected
+  end
 end
