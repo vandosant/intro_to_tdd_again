@@ -10,4 +10,14 @@ describe NumericCalculator do
 
     expect(actual).to eq expected
   end
+
+  it "subtracts numbers" do
+    tester = NumericCalculator.new
+
+    expected = 4
+
+    actual = tester.subtract(7, 3)
+
+    expect(actual).to eq expected
+  end
 end
