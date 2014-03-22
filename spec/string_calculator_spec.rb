@@ -4,9 +4,9 @@ describe StringCalculator do
   it "adds the numbers in an empty string" do
     tester = StringCalculator.new
 
-    expected = 0
-
     actual = tester.add("")
+
+    expected = 0
 
     expect(actual).to eq expected
   end
@@ -14,9 +14,9 @@ describe StringCalculator do
   it "adds single-digit numbers in a string" do
     tester = StringCalculator.new
 
-    expected = 10
-
     actual = tester.add("3, 6, 1")
+
+    expected = 10
 
     expect(actual).to eq expected
   end
@@ -24,9 +24,9 @@ describe StringCalculator do
   it "adds double-digit numbers in a string" do
     tester = StringCalculator.new
 
-    expected = 102
-
     actual = tester.add("30, 62, 10")
+
+    expected = 102
 
     expect(actual).to eq expected
   end
@@ -34,9 +34,9 @@ describe StringCalculator do
   it "ignores letters in the string" do
     tester = StringCalculator.new
 
-    expected = 102
-
     actual = tester.add("30, a, b, cee, 62, 10, what")
+
+    expected = 102
 
     expect(actual).to eq expected
   end
@@ -46,9 +46,9 @@ describe StringCalculator do
 
     tester.delimeter("!")
 
-    expected = 10
-
     actual = tester.add("3! 6! 1!")
+
+    expected = 10
 
     expect(actual).to eq expected
   end
